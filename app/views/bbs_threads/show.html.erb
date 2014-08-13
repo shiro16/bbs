@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @bbs_thread.title %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @bbs_thread.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_bbs_thread_path(@bbs_thread) %> |
+<%= link_to 'Back', bbs_threads_path %>

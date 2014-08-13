@@ -1,0 +1,23 @@
+<h1>Listing bbs_threads</h1>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>title</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bbs_threads.each do |bbs_thread| %>
+  <tr>
+    <td><%= bbs_thread.id %></td>
+    <td><%= link_to(bbs_thread.title_string, bbs_thread) %></td>
+    <td><%= link_to 'Edit', edit_bbs_thread_path(bbs_thread) %></td>
+    <td><%= link_to 'Destroy', destroy_bbs_thread_path(bbs_thread) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bbs thread', new_bbs_thread_path %>

@@ -1,0 +1,27 @@
+<h1>Listing bbs_comments</h1>
+
+<table>
+  <tr>
+    <th>Bbs thread</th>
+    <th>Body</th>
+    <th>Password</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bbs_comments.each do |bbs_comment| %>
+  <tr>
+    <td><%= bbs_comment.bbs_thread_id %></td>
+    <td><%= bbs_comment.body %></td>
+    <td><%= bbs_comment.password %></td>
+    <td><%= link_to 'Show', bbs_comment %></td>
+    <td><%= link_to 'Edit', edit_bbs_comment_path(bbs_comment) %></td>
+    <td><%= link_to 'Destroy', bbs_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bbs comment', new_bbs_comment_path %>

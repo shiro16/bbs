@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bbs_thread_id: 1
+  body: MyString
+  password: MyString
+
+two:
+  bbs_thread_id: 1
+  body: MyString
+  password: MyString
